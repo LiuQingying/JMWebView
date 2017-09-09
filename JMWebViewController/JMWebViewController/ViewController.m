@@ -7,12 +7,17 @@
 //
 
 #import "ViewController.h"
-
+#import "JMWebViewController.h"
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+- (IBAction)openWeb:(UIButton *)sender {
+    JMWebViewController *webVC = [[JMWebViewController alloc] init];
+    webVC.url = @"https://www.baidu.com";
+    [self.navigationController pushViewController:webVC animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
